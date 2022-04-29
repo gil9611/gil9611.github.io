@@ -17,8 +17,12 @@
     <meta property="og:description" content="한성컴퓨터 매장">
     <meta property="og:image" content="./img/top_logo.png">
     <title>한성컴퓨터 프로젝트</title>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
     <!-- 스타일초기화 -->
     <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <!-- 커먼css -->
+    <link rel="stylesheet" href="./css/common.css">
     <!-- 웹 폰트 연결 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,30 +40,48 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 
   
-    <style>
-        *{ margin: 0; padding: 0;}
-        *{font-family: 'HaenamFont';}
-        ul { list-style:none; }
-        li { list-style:none; }
-        a {text-decoration: none; color: black;}
-        i[class*='xi'] {font-size: 25px;}
-        i[class*='xi']:hover {color: red;}
-
-        .wrap{clear:both; width: 100%;}
-        #hd {clear:both; width: 100%;}
-            .hd_wrap { clear:both; width: 1280px; margin: 0 auto;}
-            .logo {display:block; width: 200px; float:left}
-            .logo img {display:block; float: left; width: 80%;}
-            #gnb {float: left;}
-            #gnb > ul > li {float: left; padding-left: 50px; padding-right: 20px;}
-            #gnb > ul > li > span {display: block; line-height: 36px; cursor: pointer;}
-            
-            #tnb {float: right;}
-
-        #content {clear:both; width: 100%;}
+<style>
         
-        #ft {clear:both; width: 100%;}
-    </style>
+        /* 헤더 */
+        /* 컨텐츠 */
+        #content {clear:both; width: 100%;}
+            #vs {width: 100%; overflow: hidden; position: relative;}
+            .img_box{width: 500%;}
+            .img_box li {float: left; width: 20%; position: relative;}
+            .img_box li a{display: block;}
+            .img_box li a img{display: block; width: 100%; height: auto;}
+            .img_box .title_box {position: absolute; top: 200px; left: 20px; color: darkgray; text-shadow: 2px 1px 1px darkblue; padding-left: 10px; z-index:30;}
+            .vs_tit {font-size: 50px; line-height: 1.6;}
+            .vs_com {font-size: 20px; padding-left: 15px;}
+
+            .bt_group { position:absolute; bottom:1px; left:90px; z-index:40; }
+            .bt_group button { display:block; width: 80px; height: 80px; float:left; background-color:rgba(0,0,0,0.6); border:none; outline: none; color:#fff; }
+            .bt_group button i[class*='xi'] { color: #fff; }
+            .bt_group button:hover i[class*='xi'] { cursor:pointer; color:brown; }
+            
+        /* 그리드 */
+        .grid_box {clear: both; width: 100%;}
+            .grid_wrap {clear: both; width: 100%;}
+            .grid_wrap li {float: left; height: 12.5vw; background-position:center center; }
+            .col1 { width: 8.33333%; }
+            .col2 { width: 16.66667%; }
+            .col3 { width: 25%; }
+            .col4 { width: 33.33333%; }
+            .col5 { width: 41.66667%; }
+            .col6 { width: 50%; }
+            .grid_wrap li.item1 { background-color: #d0dee8; } 
+            .grid_wrap li.item2 { background-color: #e5edf3; } 
+            .grid_wrap li.item3 { background-image: url("./img/grid1.jpg"); background-size: 100%;}
+            .grid_wrap li.item4 { background-image: url("./img/grid2.jpg"); background-size: 100%;}
+            .grid_wrap li.item5 { background-image: url("./img/grid3.jpg"); background-size: 100%;}
+            .grid_wrap li a img{display: block; width: 100%; height: auto; }
+
+            .col_tit, .col_com { color:#000; }
+            .col_tit { padding-top: 18px; }
+            .col_com { font-size:14px; padding-top: 20px; font-weight: 200;  }
+        /* 푸터 */
+
+</style>
     
 
 
@@ -79,118 +101,177 @@
                         <li>
                             <span>노트북</span>
                             <ul class="sub">
-                                <li><a href="">13형대 노트북</a></li>
-                                <li><a href="">14형대 노트북</a></li>
-                                <li><a href="">15형대 노트북</a></li>
-                                <li><a href="">17형대 노트북</a></li>
+                                <li><a href="notebook.html#page1">13형대 노트북</a></li>
+                                <li><a href="notebook.html#page2">14형대 노트북</a></li>
+                                <li><a href="notebook.html#page3">15형대 노트북</a></li>
+                                <li><a href="notebook.html#page4">17형대 노트북</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>데스크탑</span>
                             <ul class="sub">
-                                <li><a href="">사무용/교육용</a></li>
-                                <li><a href="">3D게임/그래픽용</a></li>
-                                <li><a href="">고성능/전문가용</a></li>
-                                <li><a href="">특가제품</a></li>
+                                <li><a href="desktop.html#page1">사무용/교육용</a></li>
+                                <li><a href="desktop.html#page2">3D게임/그래픽용</a></li>
+                                <li><a href="desktop.html#page3">고성능/전문가용</a></li>
+                                <li><a href="desktop.html#page4">특가제품</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>모니터</span>
                             <ul class="sub">
-                                <li><a href="">24형</a></li>
-                                <li><a href="">27형</a></li>
-                                <li><a href="">32형</a></li>
-                                <li><a href="">40형</a></li>
+                                <li><a href="monitor.html#page1">24형</a></li>
+                                <li><a href="monitor.html#page2">27형</a></li>
+                                <li><a href="monitor.html#page3">32형</a></li>
+                                <li><a href="monitor.html#page4">40형</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>TV</span>
                             <ul class="sub">
-                                <li><a href="">55형</a></li>
-                                <li><a href="">65형</a></li>
-                                <li><a href="">75형</a></li>
+                                <li><a href="tv.html#page1">55형</a></li>
+                                <li><a href="tv.html#page2">65형</a></li>
+                                <li><a href="tv.html#page3">75형</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>주변기기</span>
                             <ul class="sub">
-                                <li><a href="">키보드</a></li>
-                                <li><a href="">마우스</a></li>
-                                <li><a href="">스피커/헤드셋/마이크</a></li>
-                                <li><a href="">웹캠</a></li>
+                                <li><a href="subitem.html#page1">키보드</a></li>
+                                <li><a href="subitem.html#page2">마우스</a></li>
+                                <li><a href="subitem.html#page3">스피커/헤드셋/마이크</a></li>
+                                <li><a href="subitem.html#page4">웹캠</a></li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
-                <p id="tnd">
-                    <a href="">a</a>
-                    <a href="">b</a>
-                    <a href="">c</a>
+                <p id="tnb">
+                    <a href="">로그인</a>
+                    <a href="">회원가입</a>
+                    <a href="">고객센터</a>
+                    <a href="">공지사항</a>
                 </p>
             </div>
+            
         </header>
+        
         <div id="content">
+            <hr>
             <figure id="vs">
+                
                 <ul class="img_box">
                     <li>
                         <a href="">
                             <img src="./img/visual_sliders1.jpg" alt="">
                             <div class="title_box">
-                                <h2>안녕친구들</h2>
-                                <p>안녕친구들에 대한 고찰</p>
+                                <h2 class="vs_tit">이게 바로</h2>
+                                <p class="vs_com">당신이 원하는 그것</p>
                               
                             </div>
                         </a>
+                    </li>
+                    <li>
                         <a href="">
                             <img src="./img/visual_sliders2.jpg" alt="">
                             <div class="title_box">
-                                <h2>안녕친구들1</h2>
-                                <p>왜1</p>
+                                <h2 class="vs_tit">듀얼 화면</h2>
+                                <p class="vs_com">당신이 원하는 그것</p>
                             </div>
                         </a>
+                    </li>
+                    <li>
                         <a href="">
                             <img src="./img/visual_sliders3.jpg" alt="">
                             <div class="title_box">
-                                <h2>안녕친구들2</h2>
-                                <p>왜2</p>
+                                <h2 class="vs_tit">노트북 듀얼 화면</h2>
+                                <p class="vs_com">당신이 원하는 그것</p>
                             </div>
                         </a>
+                    </li>
+                    <li>
                         <a href="">
                             <img src="./img/visual_sliders4.jpg" alt="">
                             <div class="title_box">
-                                <h2>안녕친구들3</h2>
-                                <p>왜3</p>
+                                <h2 class="vs_tit">게이밍 노트북</h2>
+                                <p class="vs_com">당신이 원하는 그것</p>
                             </div>
                         </a>
+                    </li>
+                    <li>
                         <a href="">
-                            <img src="" alt="">
+                            <img src="./img/visual_sliders670_20210415160603.jpg" alt="">
                             <div class="title_box">
-                                <h2>안녕친구들4</h2>
-                                <p>왜4</p>
+                                <h2 class="vs_tit">데스크탑</h2>
+                                <p class="vs_com">당신이 원하는 그것</p>
                             </div>
                         </a>
                     </li>
                 </ul>
+                <hr>
                 <div class="bt_group">
-                    <button class="prev_b"></button>
-                    <button class="next_bt"></button>
+                    <button class="prev_bt"><i class="xi-arrow-left"></i></button>
+                    <button class="next_bt"><i class="xi-arrow-right"></i></button>
                 </div>
-                <div class="gid_box">
-                    <ul>
-                        <li class="col1_1"><a href=""></a><span class="arrow">-></span></li>
-                        <li class="col1_2"><a href=""></a><span class="arrow">-></span></li>
-                        <li class="col1_3"><a href=""></a><span class="arrow">-></span></li>
-                        <li class="col2_1"><a href="">이미지1</a></li>
-                        <li class="col2_2"><a href="">이미지2</a></li>
-                        <li class="col2_3"><a href="">이미지3</a></li>
+
+                <script>
+                        $(document).ready(function(){
+                            wd = $(window).width();
+                            var intv = setInterval(function(){
+                                ani1();
+                            }, 3000);
+                            function ani1(){
+                                $(".img_box").not(":animated").animate({"margin-left":-wd+"px"}, 600, function(){
+                                    $(".img_box li").eq(0).appendTo($(".img_box"));
+                                    $(".img_box").css("margin-left","0px");
+                                });
+                            }       
+                            function ani2(){
+                                $(".img_box").css("margin-left",-wd+"px");
+                                $(".img_box li:last-child").prependTo($(".img_box"));
+                                $(".img_box").not(":animated").animate({"margin-left":"0px"}, 600);
+                            }
+                            $(".bt_group .next_bt").click(function(){
+                                clearInterval(intv);
+                                ani1();
+                                intv = setInterval(function(){ ani1(); }, 3000);
+                            });
+                            $(".bt_group .prev_bt").click(function(){
+                                clearInterval(intv);
+                                ani2();
+                                intv = setInterval(function(){ ani1(); }, 3000);
+                            });
+                        });        
+                </script>
+            </figure>
+            <div>
+                <div class="grid_box">
+                    <ul class="grid_wrap">
+                        <li class="col2 item1"><a href="">
+                            <h3 class="col_tit">카드 무이자 할부 이벤트</h3>
+                            <p class="col_com">카드 결제 이용시 카드사별 무이자 할부 혜택</p>
+                            <span class="arrow">-></span>
+                        </a></li>
+                        <li class="col2 item2"><a href="">
+                            <h3 class="col_tit">게이밍 모니터 하나로 끝!</h3>
+                            <p class="col_com">G-Sync완벽지원</p>
+                            <span class="arrow">-></span>
+                        </a></li>
+                        <li class="col4 item3">
+                            <a href=""></a>
+                        </li>
+                        <li class="col2 item4">
+                            <a href=""></a>
+                        </li>
+                        <li class="col2 item5">
+                            <a href=""</a>
+                        </li>
                     </ul>
                 </div>
-            </figure>
 
-        </div>
+            </div>
+           </div>
         <footer id="ft">
             <div class="ft_wrap">
-                <nav class="fnd">
+                <nav class="fnb">
                     <a href="">회사소개</a>
                     <a href="">이용약관</a>
                     <a href="">개인정보처리방침</a>
@@ -209,6 +290,7 @@
                         <a href="" title="구글"><i class="xi-google"></i></a>
                     </li>
                 </nav>
+                <p class="copyright">좋은 컴퓨터를 만드는 사람들</p>
             </div>
         </footer>
     </div>
