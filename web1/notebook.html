@@ -23,6 +23,7 @@
     <!-- <link rel="stylesheet" href="./css/reset.css"> -->
     <!-- 커먼css -->
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sub.css">
     <!-- 웹 폰트 연결 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,24 +39,6 @@
     <!-- 웹 아이콘 연결 -->
     <!-- xeicon (https://xpressengine.github.io/XEIcon/)-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-
-  
-<style>
-    #content {clear:both; width: 100%;}
-    /* .bread_box { clear: both; width: 100%; height: 48px; border-bottom:1px solid darkblue; } */
-    .bread_wrap { width: 1280px; margin: 0 auto; }
-    .bread { height: 48px; line-height: 48px;  }
-    .bread li { float:left; padding-right: 30px; font-size: 16px;}
-    .bread li:after { content:">"; padding-left: 24px; }
-    .bread li:last-child::after { content: ""; }
-        
-    .page{clear: both; min-height: 100vh; display: none;}
-    .page:target{display: block;}
-    .page_con {clear:both; width: 100%;}
-    figure {width: 800px; margin: 0 auto; border: 2px solid #333;}
-    figure .img_wrap {width: 500px; margin: 0 auto;}
-
-</style>
     
 
 
@@ -112,7 +95,7 @@
                             <ul class="sub">
                                 <li><a href="subitem.html#page1">키보드</a></li>
                                 <li><a href="subitem.html#page2">마우스</a></li>
-                                <li><a href="subitem.html#page3">스피커/헤드셋/마이크</a></li>
+                                <li><a href="subitem.html#page3">스피커</a></li>
                                 <li><a href="subitem.html#page4">웹캠</a></li>
                             </ul>
                         </li>
@@ -135,12 +118,12 @@
                         <div class="bread_wrap">
                             <ul class="bread">
                             <li>
-                                home
+                                <a href="index.html">Home</a>
                             </li>
                             <li>노트북</li>
                             <li>
-                                <select name="sel" id="sel">
-                                        <option value="notebook.html#page1">13형대 노트북</option>
+                                <select name="sel" id="sel" class="sel">
+                                        <option value="notebook.html#page1" selected>13형대 노트북</option>
                                         <option value="notebook.html#page2">14형대 노트북</option>
                                         <option value="notebook.html#page3">15형대 노트북</option>
                                         <option value="notebook.html#page4">17형대 노트북</option>
@@ -154,6 +137,7 @@
                             <div class="img_wrap">
                                 <img src="./img/13notebook.jpg" alt="기업개요">
                             </div>
+                            <h4>TFX3150U Pro/컨버터북/노트북/PC/터치패널</h4><hr>
                             <table>
                                 <tr>
                                     <th>O/S</th>
@@ -208,6 +192,12 @@
                                     <td>[배터리]47.12Wh,[어댑터]19V,3.42A,65W,USB-PD지원</td>
                                 </tr>
                             </table>
+                            <div class="main_img">
+                                <img src="./img/notebook1_i.jpg" alt="본문">
+                                <img src="./img/notebook1_i2.jpg" alt="본문">
+                                <img src="./img/notebook1_i3.jpg" alt="본문">
+                                <img src="./img/notebook1_i4.jpg" alt="본문">
+                            </div>
                         </figure>
                     </div>
                 </section>
@@ -218,13 +208,13 @@
                         <div class="bread_wrap">
                             <ul class="bread">
                             <li>
-                                home
+                                <a href="index.html">Home</a>
                             </li>
                             <li>노트북</li>
                             <li>
-                                <select name="sel" id="sel">
+                                <select name="sel" id="sel" class="sel">
                                         <option value="notebook.html#page1">13형대 노트북</option>
-                                        <option value="notebook.html#page2">14형대 노트북</option>
+                                        <option value="notebook.html#page2" selected>14형대 노트북</option>
                                         <option value="notebook.html#page3">15형대 노트북</option>
                                         <option value="notebook.html#page4">17형대 노트북</option>
                                 </select>
@@ -237,6 +227,7 @@
                             <div class="img_wrap">
                                 <img src="./img/14notebook.jpg" alt="기업개요">
                             </div>
+                            <h4>TFX4150HW/1kg/사무용/노트북/PC</h4><hr>
                             <table>
                                 <tr>
                                     <th>O/S</th>
@@ -244,7 +235,7 @@
                                 </tr>
                                 <tr>
                                     <th>시스템</th>
-                                    <td>TFX3150U Pro 시스템</td>
+                                    <td>TFX4150H 시스템</td>
                                 </tr>
                                 <tr>
                                     <th>보증기간</th>
@@ -252,15 +243,15 @@
                                 </tr>
                                 <tr>
                                     <th>RAM</th>
-                                    <td>LDDR4X 8GB (Onboard) PC4-25600</td>
+                                    <td>DDR4 16GB PC4-25600 (8GB * 2)/td>
                                 </tr>
                                 <tr>
                                     <th>SSD</th>
-                                    <td>SSD500GB M.2 SATA</td>
+                                    <td>SSD 500GB M.2 NVMe</td>
                                 </tr>
                                 <tr>
                                     <th>CPU</th>
-                                    <td>11세대 Intel 타이거레이크 Core i5-1135G7</td>
+                                    <td>11세대 Intel 타이거레이크 Core i5-11300H</td>
                                 </tr>
                                 <tr>
                                     <th>VGA</th>
@@ -268,11 +259,11 @@
                                 </tr>
                                 <tr>
                                     <th>해상도</th>
-                                    <td>33.782cm 13.3형 1920*1080 FHD 광시야각 IPS계열 패널</td>
+                                    <td>35.56cm 14형 1920*1200 광시야각 IPS계열 패널</td>
                                 </tr>
                                 <tr>
                                     <th>사운드</th>
-                                    <td>Realtek HD Audio</td>
+                                    <td>HD Audio</td>
                                 </tr>
                                 <tr>
                                     <th>WLAN</th>
@@ -280,17 +271,24 @@
                                 </tr>
                                 <tr>
                                     <th>키보드</th>
-                                    <td>한글 멤브레인 키보드 (화이트 단색)</td>
+                                    <td>한글 화이트 백라이트 키보드</td>
                                 </tr>
                                 <tr>
                                     <th>사이즈</th>
-                                    <td>무게 1.3kg, 307(W) x 210(D) x 16(H)mm</td>
+                                    <td>무게 1kg, 309(W) x 215(D) x 16.4(H)mm</td>
                                 </tr>
                                 <tr>
                                     <th>배터리</th>
-                                    <td>[배터리]47.12Wh,[어댑터]19V,3.42A,65W,USB-PD지원</td>
+                                    <td>[배터리]53Wh,[어댑터]19V,4.74A,90W, Thunderbolt4 지원, USB-PD지원</td>
                                 </tr>
                             </table>
+                            <div class="main_img">
+                                <img src="./img/notebook2_i.jpg" alt="본문">
+                                <img src="./img/notebook2_i2.jpg" alt="본문">
+                                <img src="./img/notebook2_i3.jpg" alt="본문">
+                                <img src="./img/notebook2_i4.jpg" alt="본문">
+                                <img src="./img/notebook2_i5.jpg" alt="본문">
+                            </div>
                         </figure>
                     </div>
                 </section>
@@ -301,14 +299,14 @@
                         <div class="bread_wrap">
                             <ul class="bread">
                             <li>
-                                home
+                                <a href="index.html">Home</a>
                             </li>
                             <li>노트북</li>
                             <li>
-                                <select name="sel" id="sel">
+                                <select name="sel" id="sel" class="sel">
                                         <option value="notebook.html#page1">13형대 노트북</option>
                                         <option value="notebook.html#page2">14형대 노트북</option>
-                                        <option value="notebook.html#page3">15형대 노트북</option>
+                                        <option value="notebook.html#page3" selected>15형대 노트북</option>
                                         <option value="notebook.html#page4">17형대 노트북</option>
                                 </select>
                             </li>
@@ -320,14 +318,15 @@
                             <div class="img_wrap">
                                 <img src="./img/15notebook.jpg" alt="기업개요">
                             </div>
+                            <h4>TFX5135U/울트라북/인텔11세대 i5/썬더볼트4</h4><hr>
                             <table>
                                 <tr>
                                     <th>O/S</th>
-                                    <td>Window 11 HOME</td>
+                                    <td>Free DOS(운영체제 미탑재 모델/ 추가가능)</td>
                                 </tr>
                                 <tr>
                                     <th>시스템</th>
-                                    <td>TFX3150U Pro 시스템</td>
+                                    <td>TFX5135U 시스템</td>
                                 </tr>
                                 <tr>
                                     <th>보증기간</th>
@@ -335,15 +334,15 @@
                                 </tr>
                                 <tr>
                                     <th>RAM</th>
-                                    <td>LDDR4X 8GB (Onboard) PC4-25600</td>
+                                    <td>DDR4 16GB PC4-25600 (8GB * 2)</td>
                                 </tr>
                                 <tr>
                                     <th>SSD</th>
-                                    <td>SSD500GB M.2 SATA</td>
+                                    <td>SSD 500GB M.2 NVMe</td>
                                 </tr>
                                 <tr>
                                     <th>CPU</th>
-                                    <td>11세대 Intel 타이거레이크 Core i5-1135G7</td>
+                                    <td>11세대 Intel 타이거레이크 Core i5-11300H</td>
                                 </tr>
                                 <tr>
                                     <th>VGA</th>
@@ -351,11 +350,11 @@
                                 </tr>
                                 <tr>
                                     <th>해상도</th>
-                                    <td>33.782cm 13.3형 1920*1080 FHD 광시야각 IPS계열 패널</td>
+                                    <td>39.62cm 15형 1920*1080 광시야각 IPS계열 패널</td>
                                 </tr>
                                 <tr>
                                     <th>사운드</th>
-                                    <td>Realtek HD Audio</td>
+                                    <td>HD Audio</td>
                                 </tr>
                                 <tr>
                                     <th>WLAN</th>
@@ -363,17 +362,24 @@
                                 </tr>
                                 <tr>
                                     <th>키보드</th>
-                                    <td>한글 멤브레인 키보드 (화이트 단색)</td>
+                                    <td>한글 RGB 백라이트 키보드</td>
                                 </tr>
                                 <tr>
                                     <th>사이즈</th>
-                                    <td>무게 1.3kg, 307(W) x 210(D) x 16(H)mm</td>
+                                    <td>무게 1.7kg, 357(W) x 220(D) x 21.3(H)mm</td>
                                 </tr>
                                 <tr>
                                     <th>배터리</th>
-                                    <td>[배터리]47.12Wh,[어댑터]19V,3.42A,65W,USB-PD지원</td>
+                                    <td>[배터리]73Wh,[어댑터]19V 3.42A 65W, 썬더볼트4 지원</td>
                                 </tr>
                             </table>
+                            <div class="main_img">
+                                <img src="./img/notebook3_i.jpg" alt="본문">
+                                <img src="./img/notebook3_i2.jpg" alt="본문">
+                                <img src="./img/notebook3_i3.jpg" alt="본문">
+                                <img src="./img/notebook3_i4.jpg" alt="본문">
+                                <img src="./img/notebook3_i5.jpg" alt="본문">
+                            </div>
                         </figure>
                     </div>
                 </section>
@@ -384,15 +390,15 @@
                         <div class="bread_wrap">
                             <ul class="bread">
                             <li>
-                                home
+                                <a href="index.html">Home</a>
                             </li>
                             <li>노트북</li>
                             <li>
-                                <select name="sel" id="sel">
+                                <select name="sel" id="sel" class="sel">
                                         <option value="notebook.html#page1">13형대 노트북</option>
                                         <option value="notebook.html#page2">14형대 노트북</option>
                                         <option value="notebook.html#page3">15형대 노트북</option>
-                                        <option value="notebook.html#page4">17형대 노트북</option>
+                                        <option value="notebook.html#page4" selected>17형대 노트북</option>
                                 </select>
                             </li>
                             </ul>
@@ -403,14 +409,15 @@
                             <div class="img_wrap">
                                 <img src="./img/17notebook.jpg" alt="기업개요">
                             </div>
+                            <h4>TFX5135U/울트라북/인텔11세대 i5/썬더볼트4</h4><hr>
                             <table>
                                 <tr>
                                     <th>O/S</th>
-                                    <td>Window 11 HOME</td>
+                                    <td>Free DOS(운영체제 미탑재 모델/ 추가가능)</td>
                                 </tr>
                                 <tr>
                                     <th>시스템</th>
-                                    <td>TFX3150U Pro 시스템</td>
+                                    <td>TFG7175 시스템</td>
                                 </tr>
                                 <tr>
                                     <th>보증기간</th>
@@ -418,49 +425,63 @@
                                 </tr>
                                 <tr>
                                     <th>RAM</th>
-                                    <td>LDDR4X 8GB (Onboard) PC4-25600</td>
+                                    <td>DDR4 16GB PC4-25600 (8GB x 2)</td>
                                 </tr>
                                 <tr>
                                     <th>SSD</th>
-                                    <td>SSD500GB M.2 SATA</td>
+                                    <td>SSD500GB M.2 NVMe</td>
                                 </tr>
                                 <tr>
                                     <th>CPU</th>
-                                    <td>11세대 Intel 타이거레이크 Core i5-1135G7</td>
+                                    <td>Intel 11세대 타이거레이크 i7-11800H</td>
                                 </tr>
                                 <tr>
                                     <th>VGA</th>
-                                    <td>Intel® Iris® Xe Graphics</td>
+                                    <td>NVIDIA GeForce RTX3050 GDDR6 4GB / Intel® UHD Graphics</td>
                                 </tr>
                                 <tr>
                                     <th>해상도</th>
-                                    <td>33.782cm 13.3형 1920*1080 FHD 광시야각 IPS계열 패널</td>
+                                    <td>광시야각 IPS계열 패널 144Hz / 43.9cm(17.3) 16:9 1920x1080 FHD</td>
                                 </tr>
                                 <tr>
                                     <th>사운드</th>
-                                    <td>Realtek HD Audio</td>
+                                    <td>HD Audio</td>
                                 </tr>
                                 <tr>
                                     <th>WLAN</th>
-                                    <td>Intel® Wi-Fi 6 AX201, Bluetooth 5.1</td>
+                                    <td>Intel WiFi6 AX201, Bluetooth 5.1</td>
                                 </tr>
                                 <tr>
                                     <th>키보드</th>
-                                    <td>한글 멤브레인 키보드 (화이트 단색)</td>
+                                    <td>한글 RGB 백라이트 키보드(단색)</td>
                                 </tr>
                                 <tr>
                                     <th>사이즈</th>
-                                    <td>무게 1.3kg, 307(W) x 210(D) x 16(H)mm</td>
+                                    <td>무게 2.5Kg, 396 (W) x 264 (D) x 31 (H)mm</td>
                                 </tr>
                                 <tr>
                                     <th>배터리</th>
-                                    <td>[배터리]47.12Wh,[어댑터]19V,3.42A,65W,USB-PD지원</td>
+                                    <td>[배터리]62.32WH, 4100mAh, 일체형 [어댑터]19.5V 7.89A 150W</td>
                                 </tr>
                             </table>
+                            <div class="main_img">
+                                <img src="./img/notebook4_i.jpg" alt="본문">
+                                <img src="./img/notebook4_i2.jpg" alt="본문">
+                                <img src="./img/notebook4_i3.jpg" alt="본문">
+                                <img src="./img/notebook4_i4.jpg" alt="본문">
+                                <img src="./img/notebook4_i5.jpg" alt="본문">
+                            </div>
                         </figure>
                     </div>
                 </section>
             </div>
+            <script>
+                $(document).ready(function(){
+                    $(".sel").change(function(){
+                        location.href = this.value;
+                    });
+                });    
+            </script>
         </div>
         <footer id="ft">
             <div class="ft_wrap">
@@ -468,19 +489,19 @@
                     <a href="">회사소개</a>
                     <a href="">이용약관</a>
                     <a href="">개인정보처리방침</a>
-                    <a href="">소비자보호원</a>
-                    <a href="">전자거래분쟁조정위원회</a>
+                    <a href="https://www.kca.go.kr/home/main.do" target='_blank'>소비자보호원</a>
+                    <a href="https://www.kca.go.kr/home/main.do" target='_blank'>전자거래분쟁조정위원회</a>
                     <a href="">제휴문의</a>
                 </nav>
                 <nav class="snb">
                     <li class="sns1">
-                        <a href="" title="유튜브"><i class="xi-youtube-play"></i></a>
+                        <a href="https://www.youtube.com/" title="유튜브" target='_blank'><i class="xi-youtube-play"></i></a>
                     </li>
                     <li class="sns2">
-                        <a href="" title="네이버"><i class="xi-naver"></i></a>
+                        <a href="https://www.naver.com/" title="네이버" target='_blank'><i class="xi-naver"></i></a>
                     </li>
                     <li class="sns3">
-                        <a href="" title="구글"><i class="xi-google"></i></a>
+                        <a href="https://www.google.co.kr/" title="구글" target='_blank'><i class="xi-google"></i></a>
                     </li>
                 </nav>
                 <p class="copyright">좋은 컴퓨터를 만드는 사람들</p>
