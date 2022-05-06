@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더와 푸터</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul {list-style: none;}
+        a {text-decoration: none;}
+
+
+        .wrap{clear:both; width: 100%;}
+
+            /* 헤더 */
+            .hd_wrap {clear: both; size: 1200px; margin: 0 auto;}
+                .logo {display: block; float: left; margin-left: 20px;}
+                .gnb {display: block; float: left;}
+                    .gnb > ul > li{display: block; float: left; margin-left: 50px;}
+                    .sub {display: none;}
+                    .gnb > ul > li > ul {background-color: aqua;}
+                    .gnb > ul > li:hover ul {display: block; position: fixed;}
+
+                .tnb {float: right;}
+            /* 콘텐츠 */
+            #content {clear: both;}
+                .page{clear: both; display: none;}
+                .page:target{display: block;}
+
+                .con_wrap table {size: 800px; margin: auto;}
+                
+
+            /* 테이블 */
+            .tb1 {display: table; width: 600px; margin: 0 auto;}
+            .tb1 tr {display: table-row;}
+            .tb1 tbody th, .tb1 td {display: table-cell; border-bottom: 1px solid black;}
+            #t_title {width: 300px;}
+            tbody tr:first-child th, tbody tr:first-child td {border-top: 1px solid black;}
+            tbody th {border-right: 1px solid red;}
+
+            /* 테이블3 */
+            .tb3 {display: table; width: 600px; margin: auto;}
+            .td3 .tr {display: table-row;}
+            .tb3 .th, .tb3 .td {display: table-cell; border-bottom: 1px solid black; line-height: 40px;}
+            .tb3 .tr:first-child .th, .tb3 .tr:first-child .td {border-top: 2px solid purple;}
+            .tb3 .tr:last-child .th, .tb3 .tr:last-child .td {border-bottom: 2px solid purple;}
+            .tb3 .th {text-align: center; font-weight: bold; border-right: 1px solid coral; border-left: 1px solid coral;}
+            .tb3 .td:last-child {border-right: 1px solid coral;}
+            .tb3 .td {padding-left: 1em;}
+
+            /* 썸네일 */
+            .sumnell {clear: both; width: 1200px; margin: auto;}
+            .sumnell li {width: 300px; height: 300px; display: block; float: left;}
+            .sumnell .s_tit {font-size: 30px; }
+
+
+            /* 푸터 */
+            #ft {clear: both; size: 1200px; margin: 0 auto;}
+                .fnb {display: block; float: left;}
+                    .fnb ul li {display: block; float: left;}
+                
+                .ft_wrap .snb    {float: right;}
+                .copyright {clear: both;}
+
+             
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header id="hd">
+        <div class="hd_wrap">
+            <a href="" class="logo"><img src="./img/samsung_logo.svg" alt="로고"></a>
+            <!-- nav.gnb>ul>li*5>a.dp1+(ul.sub>li*4>a) -->
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <a href="" class="dp1">메인1</a>
+                        <ul class="sub">
+                            <li><a href="">서브11</a></li>
+                            <li><a href="">서브12</a></li>
+                            <li><a href="">서브13</a></li>
+                            <li><a href="">서브14</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">메인2</a>
+                        <ul class="sub">
+                            <li><a href="">서브21</a></li>
+                            <li><a href="">서브22</a></li>
+                            <li><a href="">서브23</a></li>
+                            <li><a href="">서브24</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">메인3</a>
+                        <ul class="sub">
+                            <li><a href="">서브31</a></li>
+                            <li><a href="">서브32</a></li>
+                            <li><a href="">서브33</a></li>
+                            <li><a href="">서브34</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">메인4</a>
+                        <ul class="sub">
+                            <li><a href="">서브41</a></li>
+                            <li><a href="">서브42</a></li>
+                            <li><a href="">서브43</a></li>
+                            <li><a href="">서브44</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">메인5</a>
+                        <ul class="sub">
+                            <li><a href="">서브51</a></li>
+                            <li><a href="">서브52</a></li>
+                            <li><a href="">서브53</a></li>
+                            <li><a href="">서브54</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- p.tnb>a{상단$}*3 -->
+            <p class="tnb">
+                <a href="web01.html#page1">상단1</a>
+                <a href="">상단2</a>
+                <a href="">상단3</a>
+            </p>
+        </div>    
+    </header>
+    <div id="content">
+        <!-- section#page$*4.page>(figure.sub_ban>img)+(div.bread_box>a{Home}*3)+(div.con_wrap>div.page_wrap) -->
+        <section id="page1" class="page">
+            <figure class="sub_ban"><img src="" alt="서브배너"></figure>
+            <div class="bread_box">
+                <div class="bread_wrap">
+                    <a href="">Home</a><a href="">메인메뉴</a>
+                    <select name="sel" id="sel1" class="sel">
+                        <option value="web01.html#page1" selected>페이지1</option>
+                        <option value="web01.html#page2">페이지2</option>
+                        <option value="web01.html#page3">페이지3</option>
+                        <option value="web01.html#page4">페이지4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="con_wrap">
+                <div class="page_wrap">
+                    <h2 class="page_tit">페이지1 제목</h2>
+                </div>
+                <table class="tb1">
+                    <thead id="t_head">
+                        <tr>
+                            <th>테이블이름</th>
+                        </tr>
+                        <tr>
+                            <th id="t_no">번호</th>
+                            <th id="t_title">제목</th>
+                            <th id="t_name">작성자</th>
+                            <th id="t_date">작성일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>머</td>
+                            <td>관리자</td>
+                            <td>몇년몇월몇일</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>예</td>
+                            <td>관리자</td>
+                            <td>어제 그제</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>으아</td>
+                            <td>관리자</td>
+                            <td>오늘</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>안해</td>
+                            <td>관리자</td>
+                            <td>내일</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="page_wrap">
+                    <h3 class="sec_tit">테이블3 제목</h3>
+                    <div class="tb3">
+                        <ul class="tr">
+                            <li class="th e1">항목명</li>
+                            <li class="td e2">항목 내용</li>
+                            <li class="th e3">항목명</li>
+                            <li class="td e4">항목 내용</li>
+                        </ul>
+                        <ul class="tr">
+                            <li class="th e1">항목명</li>
+                            <li class="td e2">항목 내용</li>
+                            <li class="th e3">항목명</li>
+                            <li class="td e4">항목 내용</li>
+                        </ul>
+                        <ul class="tr">
+                            <li class="th e1">항목명</li>
+                            <li class="td e2">항목 내용</li>
+                            <li class="th e3">항목명</li>
+                            <li class="td e4">항목 내용</li>
+                        </ul>
+                        <ul class="tr">
+                            <li class="th e1">항목명</li>
+                            <li class="td e2">항목 내용</li>
+                            <li class="th e3">항목명</li>
+                            <li class="td e4">항목 내용</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page2" class="page">
+            <figure class="sub_ban"><img src="./img/company1.jpg" alt="서브배너"></figure>
+            <div class="bread_box">
+                <div class="bread_wrap">
+                    <a href="">Home</a><a href="">메인메뉴</a>
+                    <select name="sel" id="sel2" class="sel">
+                        <option value="web01.html#page1">페이지1</option>
+                        <option value="web01.html#page2" selected>페이지2</option>
+                        <option value="web01.html#page3">페이지3</option>
+                        <option value="web01.html#page4">페이지4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="con_wrap">
+                <div class="page_wrap">
+                    <h2 class="page_tit">페이지2 제목</h2>
+                </div>
+                <div class="sumnell">
+                    <ul>
+                        <li class="s_tit"><img src="" alt="">썸네일</li>
+                        <li class="s_img2"><img src="./icon/oled_list01.jpg" alt=""></li>
+                        <li class="s_img3"><img src="./icon/oled_list02.jpg" alt=""></li>
+                        <li class="s_img4"><img src="./icon/oled_list03.jpg" alt=""></li>
+                        <li class="blank_box"><img src="" alt=""></li>
+                        <li class="s_img6"><img src="./icon/oled_list04.jpg" alt=""></li>
+                        <li class="s_img7"><img src="./icon/oled_list05.jpg" alt=""></li>
+                        <li class="s_img8"><img src="./icon/oled_list06.jpg" alt=""></li>
+                        <li class="s_tit"><img src="" alt="">썸네일2</li>
+                        <li class="s_img10"><img src="./icon/oled_list01.jpg" alt=""></li>
+                        <li class="s_img11"><img src="./icon/oled_list02.jpg" alt=""></li>
+                        <li class="s_img12"><img src="./icon/oled_list03.jpg" alt=""></li>
+                        <li class="blank_box"><img src="" alt=""></li>
+                        <li class="s_img14"><img src="./icon/oled_list04.jpg" alt=""></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="page3" class="page">
+            <figure class="sub_ban"><img src="./img/company3.jpg" alt="서브배너"></figure>
+            <div class="bread_box">
+                <div class="bread_wrap">
+                    <a href="">Home</a><a href="">메인메뉴</a>
+                    <select name="sel" id="sel3" class="sel">
+                        <option value="web01.html#page1">페이지1</option>
+                        <option value="web01.html#page2">페이지2</option>
+                        <option value="web01.html#page3" selected>페이지3</option>
+                        <option value="web01.html#page4">페이지4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="con_wrap">
+                <div class="page_wrap">
+                    <h2 class="page_tit">페이지3 제목</h2>
+                </div>
+                
+            </div>
+        </section>
+        <section id="page4" class="page">
+            <figure class="sub_ban"><img src="./img/company4.jpg" alt="서브배너"></figure>
+            <div class="bread_box">
+                <div class="bread_wrap">
+                    <a href="">Home</a><a href="">메인메뉴</a>
+                    <select name="sel" id="sel4" class="sel">
+                        <option value="web01.html#page1">페이지1</option>
+                        <option value="web01.html#page2">페이지2</option>
+                        <option value="web01.html#page3">페이지3</option>
+                        <option value="web01.html#page4" selected>페이지4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="con_wrap">
+                <div class="page_wrap">
+                    <h2 class="page_tit">페이지4 제목</h2>
+                </div>
+            </div>
+        </section>
+        <script>
+            var sel = document.getElementsByClassName("sel");
+
+            sel[0].addEventListener("change", function(){
+                location.href = sel[0].value;
+            });
+            sel[1].addEventListener("change", function(){
+                location.href = sel[1].value;
+            });
+            sel[2].addEventListener("change", function(){
+                location.href = sel[2].value;
+            });
+            sel[3].addEventListener("change", function(){
+                location.href = sel[3].value;
+            });
+
+        </script>
+    </div>
+    <footer id="ft">
+        <div class="ft_wrap">
+            <nav class="fnb">
+                <ul>
+                    <li><a href="">링크1</a></li>
+                    <li><a href="">링크2</a></li>
+                    <li><a href="">링크3</a></li>
+                    <li><a href="">링크4</a></li>
+                    <li><a href="">링크5</a></li>
+                </ul>
+            </nav>
+            <p class="snb"><a href="">소셜1</a><a href="">소셜2</a><a href="">소셜3</a></p>
+            <p class="copyright">All Copyrights by Company</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
