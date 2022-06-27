@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        a{ text-decoration: none;}
+
+        .loginField legend{ overflow: hidden; position: absolute; top: -1000em;}
+        .loginField { padding: 25px 70px 60px; font-size: 18px; font-weight: 300px;}
+        .login_tit{ margin: 0 auto; width: 100px; padding-top: 40px; padding-bottom: 25px;}
+        .loginField .logText{ display: block; height: 36px; width: 406px; margin: 0 auto; font-size: 18px; font-weight: 300px;}
+        .loginCk{margin: 40px 0 25px;}
+        .loginCk a{float: right;}
+        .logSubmit input{margin-top: 20px; height: 50px; width: 410px; font-size: 15px; color: #fff; background-color: dodgerblue; border: 0;}
+        .logSubmit a{display: block; margin-top: 20px; text-align: center;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div>
+        <h2 class="login_tit">로그인</h2>
+    </div>
+    <form action="">
+        <fieldset class="loginField">
+            <legend>로그인</legend>
+            <label for="" class="labelId">아이디</label>
+            <input type="text" class="logText" placeholder="아이디를 입력해 주세요.">
+            <label for="">비밀번호</label>
+            <input type="text" class="logText" placeholder="비밀번호를 입력해 주세요.">
+            <div class="loginCk">
+                <label><input type="checkbox">로그인 유지</label>
+                <a href="">아이디 / 비밀번호 찾기</a>
+            </div>
+            <div class="logSubmit">
+                <input type="submit" value="로그인">
+                <a href="agree.html" target="_blank">회원가입</a>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <!-- 문서 로딩전 스크립트 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <!-- 헤더 -->
+    <header class="header">
+        <!-- 로고&로그인 -->
+        <div class="hd_top_wrap">
+            <div class="hd_top_area">
+                <a href="index.html" class="hd_logo">
+                    <img src="./img/img_logo.png" alt="로고">
+                </a>
+                <div class="hd_top_r">
+                    <div class="hd_lang">
+                        <a href="">ENG</a>
+                    </div>
+                    <div class="hd_login">
+                        <span>
+                            <img src="./img/icon_login.png" alt="콘">
+                        </span>
+                        <span>
+                            <a href="login.html">로그인</a>
+                        </span>
+                        <span>
+                            <a href="agree.html">회원가입</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <!-- gnb -->
+        <div class="hd_bt_wrap">
+            <nav id="hd_gnb">
+                <ul>
+                    <li>
+                        <a href="intro.html">병원소개</a>
+                        <ul class="hd_subpage">
+                            <li><a href="intro_sub01.html">병원 이야기</a></li>
+                            <li><a href="intro_sub02.html">의료진 소개</a></li>
+                            <li><a href="intro_sub03.html">병원둘러보기</a></li>
+                            <li><a href="intro_sub04.html">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="info.html">진료안내</a>
+                        <ul class="hd_subpage">
+                            <li><a href="info_sub01.html">진료일정</a></li>
+                            <li><a href="info_sub02.html">입퇴원안내</a></li>
+                            <li><a href="info_sub03.html">서류발급안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="medi1.html">재활클리닉</a>
+                        <ul class="hd_subpage">
+                            <li><a href="medi1_sub01.html">운동치료실</a></li>
+                            <li><a href="medi1_sub02.html">작업치료실</a></li>
+                            <li><a href="medi1_sub03.html">언어치료실</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="medi2.html">전문클리닉</a>
+                        <ul class="hd_subpage">
+                            <li><a href="medi2_sub01.html">근전도 검사</a></li>
+                            <li><a href="medi2_sub02.html">통증치료실</a></li>
+                            <li><a href="medi2_sub03.html">도수치료실</a></li>
+                            <li><a href="medi2_sub04.html">교정클리닉</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="commu.html">커뮤니티</a>
+                        <ul class="hd_subpage">
+                            <li><a href="commu_sub01.html">공지사항</a></li>
+                            <li><a href="commu_sub02.html">문의사항</a></li>
+                            <li><a href="commu_sub03.html">마이페이지</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- 사이드바 -->
+        <div class="sidebar">
+            <a href=""><img src="./img/btn-calling.png" alt=""></a>
+            <a href=""><img src="./img/btn-chat-kakao.png" alt=""></a>
+            <button type="button" onclick="$('html, body').animate({scrollTop: 0}, 300);"><img src="./img/btn_top.png" alt="">TOP</button>
+        </div>
+    </header>
+<div class="join">
+    <div class="subTit">
+        <h2>회원정보입력</h2>
+    </div>
+    <form action="" class="section">
+        <table>
+            <tbody>
+                <tr>
+                    <th>아이디</th>
+                    <td><input type="text" class="text" placeholder="아이디 4자 이상"></td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td><input type="password" class="text" placeholder="영문 + 숫자조합 6자이상">&nbsp;&nbsp;&nbsp;*동일문자, 숫자 3회 반복 불가</td>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인</th>
+                    <td><input type="password" class="text" placeholder="비밀번호를 다시 입력해 주세요."></td>
+                </tr>
+                <tr>
+                    <th>이름</th>
+                    <td><input type="text" class="text" placeholder="이름을 입력하세요."></td>
+                </tr>
+                <tr>
+                    <th>이메일</th>
+                    <td><input type="text" id="email1" class="text" placeholder="이메일">@
+                        <input type="text" id="email2" class="text">
+                        <select id="selectEmail">
+                            <option value="">직접선택</option>
+                            <option value="msn.com">msn.com</option>
+                            <option value="google.com">google.com</option>
+                            <option value="nethian.com">nethian.com</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="nate.com">nate.com</option>
+                            <option value="hanmail.net">hanmail.net</option>
+                            <option value="dreanwiz.com">dreanwiz.com</option>
+                            <option value="lycos.co.kr">lycos.co.kr</option>
+                            <option value="yahoo.com">yahoo.com</option>
+                            <option value="empal.com">empal.com</option>
+                        </select>
+                    </td>
+                    <script>
+                    $('#selectEmail').change(function(){
+                        $("#selectEmail option:selected").each(function () {
+                            if($(this).val()== ''){ 
+                                $("#email2").val('');                     
+                                $("#email2").attr("disabled",false); 
+                            }else{ 
+                                $("#email2").val($(this).text());   
+                                $("#email2").attr("disabled",true); 
+                            }
+                        });
+                    });
+                    </script>
+                </tr>
+                <tr>
+                    <th>휴대폰</th>
+                    <td>
+                        <select id="selectNum">
+                            <option value="">선택</option>
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                            <option value="016">016</option>
+                            <option value="017">017</option>
+                            <option value="018">018</option>
+                            <option value="019">019</option>
+                        </select>&nbsp;-
+                        <input type="text" class="text">&nbsp;-
+                        <input type="text" class="text"><br>
+                        <span>*이벤트, 새로운 소식 등 관련 정보를 수신합니다.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="agree">수신동의
+                            <input type="radio" name="agree">수신거부
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="jo_submit">
+        <input type="submit" value="가입하기">
+    </div>
+</div>
+<footer class="footer">
+    <div class="ft_sns">
+        <div class="ft_inner">
+            <h4>서울큰나무병원 SNS</h4>
+            <p class="ft_sns_link">
+                <a href="" class="ft_sns_link1"></a>
+                <a href="" class="ft_sns_link2"></a>
+                <a href="" class="ft_sns_link3"></a>
+                <a href="" class="ft_sns_link4"></a>
+            </p>
+        </div>
+    </div>
+    <nav class="ft_link">
+        <div class="ft_inner">
+            <span><a href="">이용약관</a></span>
+            <span><a href="">개인정보처리방침</a></span>
+            <span><a href="">환자의 권리와 의무</a></span>
+            <span><a href="">비급여안내</a></span>
+        </div>
+    </nav>
+    <div class="ft_info">
+        <div class="ft_inner">
+            <h4>서울큰나무병원</h4>
+            <span>주소 : 서울시 강서구 강서로 206</span>
+            <br>
+            <span>대표 : 성남석</span>
+            <span>사업자등록번호 : 306-96-91606</span>
+            <span>대표번호 : 02-2695-1155</span>
+            <br>
+            <small class="ft_copy">Copyright © 2019 서울큰나무병원</small>
+        </div>
+    </div>
+</footer>
+</div>
+</body>
+</html>

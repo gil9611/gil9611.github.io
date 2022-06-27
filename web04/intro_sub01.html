@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>병원소개</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <!-- 푸터 -->
+    <link rel="stylesheet" href="./css/footer.css">
+    <!-- 문서 로딩전 스크립트 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <style>
+    .cotent {clear: both; width: 100%; min-height: 100%;}
+    .sub_tit { background-image: url(img/bg_sub_top1.jpg); height: 142px;}
+    .sub_tit h2 { font-size: 40px; padding: 40px 0 0; margin: 0 auto; max-width: 1120px; color: #fff;}
+    
+    .intro_list_wrap {width: 100%; background-color: #1f75b0;}
+    .intro_list {width: 1120px; margin: auto; text-align: center;}
+    .intro_list li {display: inline-block; font-size: 18px; padding-top: 20px; margin: 0 5px; }
+    .intro_list li a {display: block; color: #fff; position: relative; padding-bottom: 20px;}
+    .intro_list li:nth-child(1) a:after {content: ""; position: absolute; right: 0;bottom: 0;left: 0;height: 4px;background: #91e9ff;}
+    .intro_wrap {width: 100%; padding-bottom: 50px;}
+    .intro_inner {width: 1120px; margin: auto;}
+    .intro_img {width: 1400px; margin: auto;}
+    .intro_inner h4 {font-size: 24px; border-left: 7px solid #815349; padding-left: 10px; margin-bottom: 30px;}
+    .intro_inner p {font-size: 17px; line-height: 1.8;}
+
+    .intro_pagehead {clear: both; height: 60px; margin-bottom: 10px;}
+    .intro_pagehead {padding: 40px 0 15px; border-bottom: 1px solid #555;}
+    .intro_pagehead h3 {display: block; font-size: 40px; float: left;}
+    .intro_pagehead p {float: right;}
+    .intro_pagehead_nav a {border-right: 1px solid #555; margin: 15px; padding-right: 20px;} 
+    .intro_pagehead_nav span { padding-right: 10px; }
+    .intro_pagehead_nav span:after {padding-left: 20px; content: ">";}
+    
+    .intro_pagebody {clear: both; padding-top: 20px;}
+    .intro_pagebody table * {font-size: 18px;}
+    .intro_pagebody table tr {border-bottom: 1px solid #000;}
+    .intro_pagebody table tr:first-child { border-top: 1px solid #000;}
+    .intro_pagebody table th {width: 180px;}
+    .intro_pagebody table td {width: 940px; padding: 10px 0;}
+    .intro_pagebody table input {width: 300px; height: 40px;}
+
+    .intro_form_bt {margin-top: 40px;}
+    .intro_button_wrap {width: 200px; height: 50px; margin: auto;}
+    .intro_button_wrap button {width: 100%; height: 100%; background: #1f75b0; border: 0; color: #fff;}
+    .intro_button_wrap span {font-size: 18px;}
+
+    .intro_com {background: #f2f2f2;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 헤더 -->
+        <header class="header">
+            <!-- 로고&로그인 -->
+            <div class="hd_top_wrap">
+                <div class="hd_top_area">
+                    <a href="index.html" class="hd_logo">
+                        <img src="./img/img_logo.png" alt="로고">
+                    </a>
+                    <div class="hd_top_r">
+                        <div class="hd_lang">
+                            <a href="">ENG</a>
+                        </div>
+                        <div class="hd_login">
+                            <span>
+                                <img src="./img/icon_login.png" alt="콘">
+                            </span>
+                            <span>
+                                <a onfocus=blur() href="javascript:void(window.open('login.html','win0','width=560,height=600,status=no,toolbar=no,scrollbars=no'))">로그인</a>
+                            </span>
+                            <span>
+                                <a href="agree.html">회원가입</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <!-- gnb -->
+            <div class="hd_bt_wrap">
+                <nav id="hd_gnb">
+                    <ul>
+                        <li>
+                            <a href="intro.html">병원소개</a>
+                            <ul class="hd_subpage">
+                                <li><a href="intro_sub01.html">병원 이야기</a></li>
+                                <li><a href="intro_sub02.html">의료진 소개</a></li>
+                                <li><a href="intro_sub03.html">병원둘러보기</a></li>
+                                <li><a href="intro_sub04.html">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="info.html">진료안내</a>
+                            <ul class="hd_subpage">
+                                <li><a href="info_sub01.html">진료일정</a></li>
+                                <li><a href="info_sub02.html">입퇴원안내</a></li>
+                                <li><a href="info_sub03.html">서류발급안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="medi1.html">재활클리닉</a>
+                            <ul class="hd_subpage">
+                                <li><a href="medi1_sub01.html">운동치료실</a></li>
+                                <li><a href="medi1_sub02.html">작업치료실</a></li>
+                                <li><a href="medi1_sub03.html">언어치료실</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="medi2.html">전문클리닉</a>
+                            <ul class="hd_subpage">
+                                <li><a href="medi2_sub01.html">근전도 검사</a></li>
+                                <li><a href="medi2_sub02.html">통증치료실</a></li>
+                                <li><a href="medi2_sub03.html">도수치료실</a></li>
+                                <li><a href="medi2_sub04.html">교정클리닉</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="commu.html">커뮤니티</a>
+                            <ul class="hd_subpage">
+                                <li><a href="commu_sub01.html">공지사항</a></li>
+                                <li><a href="commu_sub02.html">문의사항</a></li>
+                                <li><a href="commu_sub03.html">마이페이지</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- 사이드바 -->
+            <div class="sidebar">
+                <a href=""><img src="./img/btn-calling.png" alt=""></a>
+                <a href=""><img src="./img/btn-chat-kakao.png" alt=""></a>
+                <button type="button" onclick="$('html, body').animate({scrollTop: 0}, 300);"><img src="./img/btn_top.png" alt="">TOP</button>
+            </div>
+        </header>
+        <div class="intro">
+            <div class="sub_tit">
+                <h2>병원소개</h2>
+            </div>
+            <div class="intro_list_wrap">
+                <ul class="intro_list">
+                    <li><a href="">병원소개</a></li>
+                    <li><a href="">의료진소개</a></li>
+                    <li><a href="">병원 둘러보기</a></li>
+                    <li><a href="">오시는 길</a></li>
+                </ul>z
+            </div>
+            <div class="intro_wrap">
+                <div class="intro_inner intro_img">
+                    <img src="img/intro_sub1.PNG" alt="병원소개">
+                </div>
+                <div class="intro_com">
+                <div class="intro_inner">			
+                    <h4 class="intro_stit01">1. 서울큰나무병원이 가고자 하는 길</h4>
+                    <div class="intro_cont">
+                        <p>
+                            인생을 살아가는 데 있어 가장 활력을 느끼는 부분은 몸의 움직임입니다. 신체가 건강하면 정신도 건강해지고, 몸을 자유롭게 움직이면 인생도 자유롭게 할 수 있을 것입니다.<br/>
+                            하지만 이에 어려움을 겪는 분들이 있습니다. 바로 뇌졸중, 척추 질환을 가진 분들입니다. 그렇다면 이분들은 앞으로 신체의 자유와 여유를 만끽할 수 없는 것일까요?
+                        </p>
+                        <h3 style="text-align:center;">“아닙니다.”</h3>
+                        <p>
+                            저희는 그 답을 서울큰나무병원에서 찾고자 합니다. 서울큰나무병원은 뇌졸중, 척추 관련 질환 치료에 최적화된 재활병원입니다.<br/>
+                            10년이 넘는 임상경력과 80여 개 병상, 60여명의 치료사, 40여 명의 간호사, 
+                            150명의 전 직원들은 다양하고 믿을 수 있는 클리닉으로 환자분들의 치료와 사회 복귀에 노력과 정성을 다하고 있습니다.
+                        </p>
+                    </div>
+                    <h4 class="intro_stit01">2. 막막한 뇌졸중 재활의 길, 해답은 서울큰나무병원에 있습니다.</h4>
+                    <div class="intro_cont">
+                        <p>
+                            재활은 관심과 사랑으로 헤쳐 나가는 과정입니다. 뇌졸중 재활도 마찬가지인데요.
+                            뇌졸중에 걱정이 많은 분들을 위해 사랑으로 일하는 서울큰나무병원이 뇌졸중 초기 증상부터 예방법까지 알려드리겠습니다.
+                        </p>
+                        <p>
+                            뇌졸중은 뇌의 혈관이 막히거나 터져서 생기는 뇌세포의 손상으로, 흔히들 중풍이라는 이름으로 알려져 있습니다.<br/>
+                            뇌에 혈액을 공급하는 혈관이 막혀서 발생하는 것이 뇌경색이며, 혈관이 터지면서 발생하는 것을 뇌출혈이라고 합니다.<br/><br/>
+                            뇌졸중이 무서운 이유는 어느 날 갑자기 예고 없이 찾아온다는 점입니다.<br/>
+                            뇌졸중은 암 다음으로 사망률이 높은 질환이며, 특히 우리나라 성인 장애의 가장 큰 원인이기도 합니다.
+                            현대 의학의 발달로 인해, 과거에 비하면 사망률이 낮아졌지만, 발병하게 된다면 절반 이상은 사망하거나 평생 남의 도움을 받아야만 하는 장애가 생길 수 있는 아직도 무서운 병입니다.<br/><br/>
+                            특히 한번 뇌졸중이 오신 분들은 재발 가능성이 일반분들보다 10배 가까이 높기에, 초기 치료 이후에도 고혈압 당뇨, 고지혈증과 같은 위험인자 관리와 예방약 복용이 무엇보다 중요합니다.<br/>
+                            또한 비만, 흡연, 음주 등은 자제하는 것이 좋고, 가장 중요한 것은 운동입니다. 본인에 맞는 운동을 규칙적으로 하고 수면도 충분히 한다면 어떤 질환에든 건강한 몸을 유지하실 수 있습니다.
+                        </p>
+                    </div>
+                    <h4 class="intro_stit01">3. 간호-간병 통합서비스 / 내 가족을 치료하고 케어한다는 마인드로 함께합니다.</h4>
+                    <div class="intro_cont">
+                        <p>
+                            서울큰나무병원은 간호∙간병 통합 서비스를 운영하고 있습니다. 여타 다른 병원들처럼 보여주기식 서비스가 아닌 진심을 다해 환자들의 상태를 진단하고 케어하며, 
+                            더 나아질 수 있도록 재활을 돕고 있습니다.<br/> 
+                            또한 높은 간호 등급을 유지하고 있는 병원으로, 수년의 임상 경험을 가진 능숙한 간호사가 환자 한 분마다 최대한의 관심을 쏟아 최선의 재활 의료 서비스를 제공하기 위해 노력하고 있습니다.<br/><br/>
+                            서울큰나무병원 간호∙간병 통합 서비스의 차별점은 요양보호사를 정규직으로 채용하여 서비스를 제공하고 있다는 점입니다.<br/>
+                            “직원이 행복해야지 진심이 우러나는 서비스를 제공할 수 있다"라는 서울큰나무병원의 이념으로 직원들의 고용안정을 추구하고 있습니다.<br/><br/>
+                            요양보호사는 환자의 일상생활에 손과 발이 되어주는 직군으로, 업무환경 만족도의 향상이, 서울큰나무병원의 간호∙간병 통합 서비스의 서비스 만족도 향상에 크게 기여했다고 생각합니다.
+                        </p>
+                        
+                    </div>
+                    <h4 class="intro_stit01">4. 환자&보호자의 경제적 부담감 해소를 위해 항상 노력하겠습니다.</h4>
+                    <div class="intro_cont">
+                        <p>
+                            재활치료를 하는 데에 가장 큰 걱정은 비용 문제라 생각합니다. 생활하기도 벅찬데 치료비까지 감당하려 하니 보호자들 마음엔 짐이, 환자분들 마음엔 눈치가 가득할 것입니다.<br/>
+                            저희는 이 문제 또한 도움을 드리려 언제나 노력하고 있으며, 그 해답을 제안하고자 합니다.<br/><br/>
+                            본인부담상한제는 국민건강보험공단에서 환자분들, 보호자분들의 치료비로 인한 경제적 부담을 완화시켜드리기 위한 제도입니다.<br/>
+                            개인 소득수준에 따라 부담금이 일정치를 넘으면 해당 초과분부터는 치료비를 지원하는 제도입니다.
+                        </p>
+                        <p>
+                            본인부담상한제도에 있어 낯설은 환자&보호자분들이 많이 계실거라 생각이듭니다. 입원 환자&보호자 분들에게 친절하게 안내해드리고 있고, 
+                            임상경험을 바탕으로 최대한 많은 분들을 도와드리려 노력하고 있습니다.<br/><br/>
+                            이 제도에 해당되지 않는 분들에게는 사회사업실에서 주민센터, 구청 등 국가지원을 비롯하여 민간 의료 재단을 연계하여 치료비를 지원을 해드리고자 최선을 다하고 있습니다.<br/>
+                            재활치료만으로도 힘든 시기, 치료비에 대한 부담까지 안아야 하는 환자와 보호자의 마음을 잘 알기 때문에 서울큰나무병원은 치료비에 대한 부담감이라도 완화시켜드리기 위하여 항상 최선을 다하겠습니다.
+                        </p>
+                    </div>
+                    <h4 class="intro_stit01">5. 코로나 시대 안전한 환경 속에서 재활치료를 제공합니다.</h4>
+                    <div class="intro_cont">
+                        <p>
+                            서울큰나무병원병원 임직원들 2021년 5월 기준 전원 코로나 백신 접종을 완료하여, 처음 서울큰나무병원에 방문하시는 분들이 염려되지 않도록 준비했습니다.<br/><br/>
+                            게다가 코로나19 위탁의료기관으로 선정되어 백신 접종까지 받으실 수 있습니다.<br/>하지만, 아직은 코로나가 안정화된 상황이 아니기 때문에 
+                            환자분들을 만나고 싶다면 원하실 때 언제든 비대면 면회를 통해 대화하고, 행복한 시간을 가질 수 있도록 준비했습니다. 
+                            대화와 만남이 서로의 마음을 연결하는 통로이고 아픈 몸을 이겨낼 수 있는 가장 좋은 방법이기 때문입니다.<br/>
+                            저희 병원은 환자분들의 건강과 안전을 최우선시하기에 코로나로부터 가장 일선에서 벗어날 수 있게 노력하고 있습니다.</p>
+                    </div>
+                    <h4 class="intro_stit01">6. 서울큰나무병원의 미래지향성</h4>
+                    <div class="intro_cont">
+                        <p>
+                            서울큰나무병원은 아픔이 없는 사회를 꿈꿉니다. 모든 사람들이 건강한 신체를 갖고 넓은 세상을 자유롭게 즐기는 모습을 바랍니다.<br/>
+                            그렇기에 저희는 노력합니다. 이 노력에는 변하지 않는 진실 되고 친절한 마음이 있습니다.<br/><br/>
+                            
+                            뇌졸중, 척추 질환뿐만 아니라 다양한 질환으로 인해 재활에 어려움을 겪고 계신 분들에게 서울큰나무병원의 오랜 경험과 사랑으로 여러분의 가족, 친구, 동료가 다시 한번 일어나서 더 나은 꿈을 꿀 수 있도록 돕겠습니다.
+                        </p>
+                       
+                        <p>
+                            서울큰나무병원은 아픔이 없는 사회를 꿈꿉니다. 모든 사람들이 건강한 신체를 갖고 넓은 세상을 자유롭게 즐기는 모습을 바랍니다.<br/>
+                            그렇기에 저희는 노력합니다. 이 노력에는 변하지 않는 진실 되고 친절한 마음이 있습니다.<br/><br/>
+                            
+                            뇌졸중, 척추 질환뿐만 아니라 다양한 질환으로 인해 재활에 어려움을 겪고 계신 분들에게 서울큰나무병원의 오랜 경험과 사랑으로 여러분의 가족, 친구, 동료가 다시 한번 일어나서 더 나은 꿈을 꿀 수 있도록 돕겠습니다.
+                        </p>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="ft_sns">
+                <div class="ft_inner">
+                    <h4>서울큰나무병원 SNS</h4>
+                    <p class="ft_sns_link">
+                        <a href="" class="ft_sns_link1"></a>
+                        <a href="" class="ft_sns_link2"></a>
+                        <a href="" class="ft_sns_link3"></a>
+                        <a href="" class="ft_sns_link4"></a>
+                    </p>
+                </div>
+            </div>
+            <nav class="ft_link">
+                <div class="ft_inner">
+                    <span><a href="">이용약관</a></span>
+                    <span><a href="">개인정보처리방침</a></span>
+                    <span><a href="">환자의 권리와 의무</a></span>
+                    <span><a href="">비급여안내</a></span>
+                </div>
+            </nav>
+            <div class="ft_info">
+                <div class="ft_inner">
+                    <h4>서울큰나무병원</h4>
+                    <span>주소 : 서울시 강서구 강서로 206</span>
+                    <br>
+                    <span>대표 : 성남석</span>
+                    <span>사업자등록번호 : 306-96-91606</span>
+                    <span>대표번호 : 02-2695-1155</span>
+                    <br>
+                    <small class="ft_copy">Copyright © 2019 서울큰나무병원</small>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
