@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>글쓰기</title>
+    <title>공지사항</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/header.css">
     <!-- 푸터 -->
@@ -31,22 +31,31 @@
     .commu_pagehead_nav span { padding-right: 10px; }
     .commu_pagehead_nav span:after {padding-left: 20px; content: ">";}
     
-    .con_form_wrap{margin-top: 50px; border-radius: 30px; border: 2px solid #1f75b0;}
-    .commu_tbody {width: 1120px; }
-    .commu_tbody tr > * {padding: 20px 10px;}
-    .commu_tbody tr:first-child > * {border-bottom: 1px solid #555;}
-    .commu_tbody tr:first-child input {width: 500px; height: 30px;}
-    .commu_tbody tr:first-child th {width: 100px;}
-    .commu_tbody tr:first-child td {width: 880px;}
+    .commu_pagebody {clear: both; padding-top: 20px;}
+    .commu_search {width: 585px; margin: auto; border-radius: 30px; border: 2px solid #eee; padding: 10px;}
+    .commu_search * {border: 0; line-height: 25px; font-size: 18px;}
+    .commu_search_box select {width: 120px;}
+    .commu_search_box input {width: 350px; padding: 0 20px;}
+    .commu_search_box div {clear: both; display: inline-block;}
+    .commu_search_bt {width: 25px; height: 25px; background: url(/img/btn_search.png); background-repeat: no-repeat; background-size: 100%; border: 0; cursor: pointer; }
     
+    .commu_table_wrap {margin: auto; margin-top: 30px;}
+    .commu_table {font-size: 18px;}
+    .commu_thead {text-align: center;}
+    .commu_thead tr {height: 60px; line-height: 60px;}
+    .commu_thead th {border-top: 2px solid #1f75b0; border-bottom: 1px solid #ddd; background: #fbfbfc;}
+    .commu_th1 {width: 100px;}
+    .commu_th2 {width: 890px;}
+    .commu_th3 {width: 130px;}
+    .commu_tbody tr td:first-child {text-align: center;}
+    .commu_tbody tr td:last-child {text-align: center;}
+    .commu_table td {border-bottom: 1px solid #ddd; padding: 20px 10px;}
 
     .commu_form_bt {margin-top: 40px;}
-    .commu_button_wrap {width: 800px; height: 50px; margin: auto;}
-    .commu_button_wrap button {width: 200px; height: 100%; background: #1f75b0; border: 0; color: #fff; margin-right: 90px;}
-    .commu_button_wrap a {color: #fff; font-size: 18px;}
-    .commu_button_wrap button:last-child {margin: 0;}
+    .commu_button_wrap {width: 200px; height: 50px; margin: auto;}
+    .commu_button_wrap button {width: 100%; height: 100%; background: #1f75b0; border: 0; color: #fff;}
+    .commu_button_wrap button a {color: #fff;}
     .commu_button_wrap span {font-size: 18px;}
-
     </style>
 </head>
 <body>
@@ -136,7 +145,7 @@
         </header>
         <div class="commu">
             <div class="sub_tit">
-                <h2>글쓰기</h2>
+                <h2>커뮤니티</h2>
             </div>
             <div class="commu_list_wrap">
                 <ul class="commu_list">
@@ -148,61 +157,77 @@
             <div class="commu_wrap">
                 <div class="commu_pagehead">
                     <div>
-                        <h3>공지사항 글쓰기</h3>
+                        <h3>공지사항</h3>
                         <p class="commu_pagehead_nav">
                             <a href="index.html">HOME</a>
                             <span>커뮤니티</span>
-                            <span>공지사항</span>
-                            <strong>글쓰기</strong>
+                            <strong>공지사항</strong>
                         </p>
                     </div>
                 </div>
-                <div class="con_form_wrap">
-                    <form action="/myappp/board/insert" method="post">
-                        <table class="table" id="lst_tb">
+                <div class="commu_pagebody">
+                    <div class="commu_search">
+                        <div class="commu_search_box">
+                            <select name="search" id="search">
+                                <option value="title">제목</option>
+                                <option value="content">내용</option>
+                                <option value="all">제목+내용</option>
+                            </select>
+                            <input type="text" placeholder="키워드를 입력하세요"/>
+                            <button type="submit" class="commu_search_bt"/>
+                        </div>
+                    </div>
+                    <div class="commu_table_wrap">
+                        <table class="commu_table">
+                            <thead class="commu_thead">
+                                <tr>
+                                    <th class="commu_th1">NO</th>
+                                    <th class="commu_th2">제목</th>
+                                    <th class="commu_th3">작성일</th>
+                                </tr>
+                            </thead>
                             <tbody class="commu_tbody">
                                 <tr>
-                                    <th class="item1"></th>
-                                    <th class="item1">제목</th>
-                                    <td colspan="5">
-                                        <input type="text" name="title" required>
-                                    </td> 
+                                    <td>공지</td>
+                                    <td><a href="">6월 일/공휴일 코로나 검사가 중단됩니다.</a></td>
+                                    <td>2022.06.13</td>
                                 </tr>
                                 <tr>
-                                    <th class="item2"></th>
-                                    <th class="item2">작성자</th>
-                                    <td>관리자<input type="hidden" name="nickname" value="관리자"></td>
-                                    <th class="item2">작성일 : 2022-06-24</th>
+                                    <td>공지</td>
+                                    <td><a href="">홍콩 출국용 코로나 검사&진단서 발행 가능합니다.</a></td>
+                                    <td>2022.06.07</td>
                                 </tr>
                                 <tr>
-                                    <th class="item3"></th>
-                                    <th class="item3"></th>
-                                    <td colspan="5">
-                                        <textarea name="note" cols="80" rows="40"></textarea>
-                                    </td>
+                                    <td>공지</td>
+                                    <td><a href="">6월 일/공휴일 코로나 검사가 중단됩니다.</a></td>
+                                    <td>2022.06.13</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="5">
-                                        <div class="commu_form_bt">
-                                            <div class="commu_button_wrap">
-                                                <button type="submit">
-                                                    <span>글쓰기</span>
-                                                </button>
-                                                <button type="reset">
-                                                    <span>취소</span>
-                                                </button>
-                                                <button type="">
-                                                    <a href="/myappp/board/list">글 목록</a>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>	
+                                    <td>179</td>
+                                    <td><a href="">6/2(목)~6/3(금) 셔틀버스 1대 운행 안내</a></td>
+                                    <td>2022.05.31</td>
+                                </tr>
+                                <tr>
+                                    <td>178</td>
+                                    <td><a href="">6월 1일 지방선거일, 6월 6일 현충일 휴진입니다.</a></td>
+                                    <td>2022.05.16</td>
+                                </tr>
+                                <tr>
+                                    <td>177</td>
+                                    <td><a href="">5월 5일 어린이날 휴진입니다.</a></td>
+                                    <td>2022.04.19</td>
+                                </tr>
                             </tbody>
                         </table>
-                    </form>
+                    </div>
                 </div>
-                
+                <div class="commu_form_bt">
+                    <div class="commu_button_wrap">
+                        <button type="submit" >
+                            <span><a href="commu_sub01 write.html">글쓰기</a></span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- 푸터 -->

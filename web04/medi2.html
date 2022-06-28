@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>글쓰기</title>
+    <title>근전도검사</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/header.css">
     <!-- 푸터 -->
@@ -12,41 +12,43 @@
     <!-- 문서 로딩전 스크립트 -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <style>
-    .commu {clear: both; width: 100%; min-height: 100%;}
+    .cotent {clear: both; width: 100%; min-height: 100%;}
     .sub_tit { background-image: url(img/bg_sub_top1.jpg); height: 142px;}
     .sub_tit h2 { font-size: 40px; padding: 40px 0 0; margin: 0 auto; max-width: 1120px; color: #fff;}
     
-    .commu_list_wrap {width: 100%; background-color: #1f75b0;}
-    .commu_list {width: 1120px; margin: auto; text-align: center;}
-    .commu_list li {display: inline-block; font-size: 18px; padding-top: 20px; margin: 0 5px; }
-    .commu_list li a {display: block; color: #fff; position: relative; padding-bottom: 20px;}
-    .commu_list li:nth-child(1) a:after {content: ""; position: absolute; right: 0;bottom: 0;left: 0;height: 4px;background: #91e9ff;}
-    .commu_wrap {width: 1120px; margin: auto; padding-bottom: 50px;}
-    
-    .commu_pagehead {clear: both; height: 60px; margin-bottom: 10px;}
-    .commu_pagehead {padding: 40px 0 15px; border-bottom: 1px solid #555;}
-    .commu_pagehead h3 {display: block; font-size: 40px; float: left;}
-    .commu_pagehead p {float: right;}
-    .commu_pagehead_nav a {border-right: 1px solid #555; margin: 15px; padding-right: 20px;} 
-    .commu_pagehead_nav span { padding-right: 10px; }
-    .commu_pagehead_nav span:after {padding-left: 20px; content: ">";}
-    
-    .con_form_wrap{margin-top: 50px; border-radius: 30px; border: 2px solid #1f75b0;}
-    .commu_tbody {width: 1120px; }
-    .commu_tbody tr > * {padding: 20px 10px;}
-    .commu_tbody tr:first-child > * {border-bottom: 1px solid #555;}
-    .commu_tbody tr:first-child input {width: 500px; height: 30px;}
-    .commu_tbody tr:first-child th {width: 100px;}
-    .commu_tbody tr:first-child td {width: 880px;}
-    
+    .medi2_list_wrap {width: 100%; background-color: #1f75b0;}
+    .medi2_list {width: 1120px; margin: auto; text-align: center;}
+    .medi2_list li {display: inline-block; font-size: 18px; padding-top: 20px; margin: 0 5px; }
+    .medi2_list li a {display: block; color: #fff; position: relative; padding-bottom: 20px;}
+    .medi2_list li:nth-child(1) a:after {content: ""; position: absolute; right: 0;bottom: 0;left: 0;height: 4px;background: #91e9ff;}
+    .medi2_wrap {width: 100%; padding-bottom: 50px;}
+    .medi2_inner {width: 1120px; margin: 40px auto;}
+    .medi2_img {width: 500px;}
+    .medi2_inner h4 {font-size: 24px; border-left: 7px solid #815349; padding-left: 10px; margin-bottom: 30px;}
+    .medi2_inner p {font-size: 17px; line-height: 1.8;}
 
-    .commu_form_bt {margin-top: 40px;}
-    .commu_button_wrap {width: 800px; height: 50px; margin: auto;}
-    .commu_button_wrap button {width: 200px; height: 100%; background: #1f75b0; border: 0; color: #fff; margin-right: 90px;}
-    .commu_button_wrap a {color: #fff; font-size: 18px;}
-    .commu_button_wrap button:last-child {margin: 0;}
-    .commu_button_wrap span {font-size: 18px;}
+    .medi2_pagehead {clear: both; height: 60px; margin-bottom: 10px;}
+    .medi2_pagehead {padding: 40px 0 15px; border-bottom: 1px solid #555;}
+    .medi2_pagehead h3 {display: block; font-size: 40px; float: left;}
+    .medi2_pagehead p {float: right;}
+    .medi2_pagehead_nav a {border-right: 1px solid #555; margin: 15px; padding-right: 20px;} 
+    .medi2_pagehead_nav span { padding-right: 10px; }
+    .medi2_pagehead_nav span:after {padding-left: 20px; content: ">";}
+    
+    .medi2_pagebody {clear: both; padding-top: 20px;}
+    .medi2_pagebody table * {font-size: 18px;}
+    .medi2_pagebody table tr {border-bottom: 1px solid #000;}
+    .medi2_pagebody table tr:first-child { border-top: 1px solid #000;}
+    .medi2_pagebody table th {width: 180px;}
+    .medi2_pagebody table td {width: 940px; padding: 10px 0;}
+    .medi2_pagebody table input {width: 300px; height: 40px;}
 
+    .medi2_form_bt {margin-top: 40px;}
+    .medi2_button_wrap {width: 200px; height: 50px; margin: auto;}
+    .medi2_button_wrap button {width: 100%; height: 100%; background: #1f75b0; border: 0; color: #fff;}
+    .medi2_button_wrap span {font-size: 18px;}
+
+    .medi2_com {background: #f2f2f2;}
     </style>
 </head>
 <body>
@@ -100,7 +102,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="medi1.html">재활클리닉</a>
+                            <a href="medi2.html">재활클리닉</a>
                             <ul class="hd_subpage">
                                 <li><a href="medi1_sub01.html">운동치료실</a></li>
                                 <li><a href="medi1_sub02.html">작업치료실</a></li>
@@ -110,7 +112,7 @@
                         <li>
                             <a href="medi2.html">전문클리닉</a>
                             <ul class="hd_subpage">
-                                <li><a href="medi2_sub01.html">근전도 검사</a></li>
+                                <li><a href="medi2_sub01.html">근전도검사</a></li>
                                 <li><a href="medi2_sub02.html">통증치료실</a></li>
                                 <li><a href="medi2_sub03.html">도수치료실</a></li>
                                 <li><a href="medi2_sub04.html">교정클리닉</a></li>
@@ -134,78 +136,56 @@
                 <button type="button" onclick="$('html, body').animate({scrollTop: 0}, 300);"><img src="./img/btn_top.png" alt="">TOP</button>
             </div>
         </header>
-        <div class="commu">
+        <div class="medi2">
             <div class="sub_tit">
-                <h2>글쓰기</h2>
+                <h2>근전도검사</h2>
             </div>
-            <div class="commu_list_wrap">
-                <ul class="commu_list">
-                    <li><a href="">공지사항</a></li>
-                    <li><a href="">문의사항</a></li>
-                    <li><a href="">치료후기</a></li>
+            <div class="medi2_list_wrap">
+                <ul class="medi2_list">
+                    <li><a href="medi2_sub01.html">근전도검사</a></li>
+                    <li><a href="medi2_sub02.html">통증치료실</a></li>
+                    <li><a href="medi2_sub03.html">도수치료실</a></li>
+                    <li><a href="medi2_sub04.html">교정클리닉</a></li>
                 </ul>
             </div>
-            <div class="commu_wrap">
-                <div class="commu_pagehead">
-                    <div>
-                        <h3>공지사항 글쓰기</h3>
-                        <p class="commu_pagehead_nav">
-                            <a href="index.html">HOME</a>
-                            <span>커뮤니티</span>
-                            <span>공지사항</span>
-                            <strong>글쓰기</strong>
-                        </p>
-                    </div>
-                </div>
-                <div class="con_form_wrap">
-                    <form action="/myappp/board/insert" method="post">
-                        <table class="table" id="lst_tb">
-                            <tbody class="commu_tbody">
-                                <tr>
-                                    <th class="item1"></th>
-                                    <th class="item1">제목</th>
-                                    <td colspan="5">
-                                        <input type="text" name="title" required>
-                                    </td> 
-                                </tr>
-                                <tr>
-                                    <th class="item2"></th>
-                                    <th class="item2">작성자</th>
-                                    <td>관리자<input type="hidden" name="nickname" value="관리자"></td>
-                                    <th class="item2">작성일 : 2022-06-24</th>
-                                </tr>
-                                <tr>
-                                    <th class="item3"></th>
-                                    <th class="item3"></th>
-                                    <td colspan="5">
-                                        <textarea name="note" cols="80" rows="40"></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="5">
-                                        <div class="commu_form_bt">
-                                            <div class="commu_button_wrap">
-                                                <button type="submit">
-                                                    <span>글쓰기</span>
-                                                </button>
-                                                <button type="reset">
-                                                    <span>취소</span>
-                                                </button>
-                                                <button type="">
-                                                    <a href="/myappp/board/list">글 목록</a>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>	
-                            </tbody>
-                        </table>
-                    </form>
+            <div class="medi2_wrap">
+                <div class="medi2_inner medi2_img">
+                    <img src="img/medi2_sub1.PNG" alt="운동치료실">
                 </div>
                 
+                <div class="medi2_com">
+                <div class="medi2_inner">			
+                    <h4 class="medi2_stit01">근전도검사란?</h4>
+                    <div class="medi2_cont">
+                        <p>
+                            근전도검사는 신경과 근육의 이상이 있는지 보기 위한 검사입니다. 근전도검사에는 피부에 전기자극을 주어 검사하는 신경전도검사와 근육에 바늘을 찔러 검사하는 침근전도검사가 있습니다.
+                        </p>
+                        
+                    </div>
+                    <h4 class="medi2_stit01">근전도검사를 하는 이유는?</h4>
+                    <div class="medi2_cont">
+                        <p>
+                            근육이나 신경의 정확한 손상부위,손상정도를 판별하여 치료 방향을 올바르게 잡으며예후를 예측합니다.또한 질병이 호전되고 있는지 악화되고 있는지 등을 알 수 있습니다.
+                        </p>
+                    </div>
+                    <h4 class="medi2_stit01">정확한 진단과 빠른 치료를 위한 첫걸음</h4>
+                    <div class="medi2_cont">
+                        
+                        <p>
+                            - 손,발이나 팔,다리 저림 증상이 있는 경우 <br>
+                            - 당뇨 환자에서 손,발 저림 증상이 있는 경우<br>
+                            - 팔,다리에 힘이 없고 근육이 마르는 경우<br>
+                            - 이유 없이 사지의 근력이 약화되는 경우<br>
+                            - 목,허리 통증이 지속되는 경우<br>
+                            - 표정이 부자연스러워지거나 얼굴이 비대칭으로 변한 경우<br>
+                            - 기타 의사가 필요하다고 권장하는 경우<br>
+                        </p>
+                        
+                    </div>
+                </div>
+              </div>
             </div>
         </div>
-        <!-- 푸터 -->
         <footer class="footer">
             <div class="ft_sns">
                 <div class="ft_inner">
