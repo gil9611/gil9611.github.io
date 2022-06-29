@@ -68,7 +68,7 @@
                                 <img src="./img/icon_login.png" alt="콘">
                             </span>
                             <span>
-                                <a onfocus=blur() href="javascript:void(window.open('login.html','win0','width=560,height=600,status=no,toolbar=no,scrollbars=no'))">로그인</a>
+                                <a href="login.html">로그인</a>
                             </span>
                             <span>
                                 <a href="agree.html">회원가입</a>
@@ -161,27 +161,26 @@
                     <form action="/myappp/board/insert" method="post">
                         <table class="table" id="lst_tb">
                             <tbody class="commu_tbody">
-                                    <tr>
-                                        <th class="item1"></th>
-                                        <th class="item1">제목</th>
-                                        <td colspan="5">
-                                            <input type="text" name="title" required>
-                                        </td> 
-                                    </tr>
-                                    <tr>
-                                        <th class="item2"></th>
-                                        <th class="item2">작성자</th>
-                                        <td>관리자<input type="hidden" name="nickname" value="관리자"></td>
-                                        <th class="item2">작성일 : 2022-06-24</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="item3"></th>
-                                        <th class="item3"></th>
-                                        <td colspan="5">
-                                            <textarea name="note" cols="80" rows="40"></textarea>
-                                        </td>
-                                    </tr>
-                                
+                                <tr>
+                                    <th class="item1"></th>
+                                    <th class="item1">제목</th>
+                                    <td colspan="5">
+                                        <input type="text" name="title" required>
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <th class="item2"></th>
+                                    <th class="item2">작성자</th>
+                                    <td>관리자<input type="hidden" name="nickname" value="관리자"></td>
+                                    <th class="item2">작성일 : 2022-06-24</th>
+                                </tr>
+                                <tr>
+                                    <th class="item3"></th>
+                                    <th class="item3"></th>
+                                    <td colspan="5">
+                                        <textarea name="note" cols="80" rows="40"></textarea>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td colspan="5">
                                         <div class="commu_form_bt">
