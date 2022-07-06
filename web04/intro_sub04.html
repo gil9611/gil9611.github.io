@@ -52,6 +52,14 @@
     .intro_button_wrap span {font-size: 18px;}
 
     .intro_com {background: #f2f2f2;}
+
+    .inner {margin: 50px 0 auto; width: 1100px; min-height: 500px;}
+    .map_area {float: left; width: 605px;}
+    .txt_wrap {background: #f39f00; float: right; width: 390px; padding: 20px 35px 50px; height: 430px;}
+    .txt_wrap dt {padding: 15px 0; font-size: 24px; color: #fff; font-weight: 300; line-height: 24px;}
+    .txt_wrap dd {padding: 15px 0; border-bottom: 1px solid #f9ba42; font-size: 17px; color: #fff; font-weight: 400; letter-spacing: -.2px; font-size: 15px; line-height: 15px;}
+    .call a {font-size: 24px; line-height: 24px;}
+
     </style>
 </head>
 <body>
@@ -152,8 +160,41 @@
                 </ul>
             </div>
             <div class="intro_wrap">
-                <div class="intro_inner intro_img">
-                    <img src="img/intro_sub04_1.PNG" alt="오시는 길">
+                <div class="intro_inner intro_script">
+                    <div class="inner pb100">
+                        <div class="map_wrap motion">
+                            <div class="map_area">
+                                <div id="daumRoughmapContainer1569551190070" class="root_daum_roughmap root_daum_roughmap_landing" style="padding:0; border:none"></div>
+                                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                                <script charset="UTF-8">
+                                    new daum.roughmap.Lander({
+                                        "timestamp" : "1569551190070",
+                                        "key" : "v7ea",
+                                        "mapWidth" : "640",
+                                        "mapHeight" : "500"
+                                    }).render();
+                                </script>
+                            </div>
+                            <div class="txt_wrap">
+                                <dl class="address">
+                                    <dt>주소</dt>
+                                    <dd>(07698) 서울특별시 강서구 강서로 206 서울큰나무병원</dd>
+                                </dl>
+                                <dl class="call">
+                                    <dt>대표전화</dt>
+                                    <dd class="">
+                                        <div class="number" ><a href="tel:0226951155">02.2695.1155</a></div>
+                                        <div class="time">평일 09:00 ~ 19:00 / 토요일 09:00 ~ 14:00</div>
+                                        <div class="time_txt">점심시간 오후 1시 ~ 2시 / 토요일 점심시간 없음 / 일요일 및 공휴일 휴진</div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>교통편</dt>
+                                    <dd>지하철 :<span class="line">5</span>호선 우장산역 2번 출구 방향 도보 7분 / <span class="line">5</span>호선 화곡역 1번 출구 방향 도보 5분<br/>버스 : (대원시장) / 마을버스 : 강서06 / 간선버스 : 652, 661 / 지선버스 : 6629, 6630, 6648, 6657<br/>자차 : 마곡/발산지구에서 10분 내외 / 강서구청사거리에서 7분 내외</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
                 </div>        
             </div>
         </div>
