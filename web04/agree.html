@@ -104,6 +104,7 @@
         <h2>약관동의</h2>
     </div>
     <div class="agreeForm">
+        <form action="join.html" method="post" name="agree_form" onsubmit="return send(this)">
         <div>
             <div class="scrollBar">
                 이용약관 <br>
@@ -251,7 +252,7 @@
                 Ⅳ. 치료비, 검사비, 의약품 가격 등에 대하여 상담을 신청하는 경우<br>
             </div>
             <div class="ckbox">
-                <input type="checkbox">위의 이용약관에 동의합니다.
+                <input type="checkbox" id="ckbox1">위의 이용약관에 동의합니다.
             </div>
         </div>
         <div>
@@ -377,7 +378,7 @@
                 ο 시행일자 : 2017년 06월 19일
             </div>
             <div class="ckbox">
-                <input type="checkbox">위의 개인 정보 수집 처리에 동의합니다.
+                <input type="checkbox" id="ckbox2">위의 개인 정보 수집 처리에 동의합니다.
             </div>
         </div>
         <div>
@@ -401,12 +402,30 @@
                 : 서비스 이용기록, 접속 로그, 쿠키, 접속 IP정보
             </div>
             <div class="ckbox">
-                <input type="checkbox">위의 개인 정보 수집 처리에 동의합니다.
+                <input type="checkbox" id="ckbox3">위의 개인 정보 수집 처리에 동의합니다.
             </div>
         </div>
+        <input type="checkbox" name="ckbox_all" id="ckbox_all" onclick="allCheck()">
+			<label for="ckbox_all">전체 약관 및 개인정보처리방침에 동의합니다.</label>
         <div class="agreeBtn">
-            <a href="join.html"><input type="button" value="다음"></a>
+            <a><input type="submit" value="다음"></a>
         </div>
+        </form>
+        <script>
+            function send(a) {
+                if(a.ckbox1.checked==true && a.ckbox2.checked==true && a.ckbox3.checked==true) {
+                    return true;
+                } else {
+                    alert("약관에 동의하지 않으셨습니다.");
+                    return false;
+                }
+            }
+            function allCheck(){
+                agree_form.ckbox1.checked = true;
+                agree_form.ckbox2.checked = true;
+                agree_form.ckbox3.checked = true;
+            }
+            </script>
     </div>
 </div>
 </body>
