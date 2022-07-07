@@ -13,9 +13,9 @@
 .ft_link {padding: 15px 0; border-bottom: 1px solid #ddd;}
 .ft_link span {border-left: 1px solid #ddd; margin-left: 10px; padding-left: 14px;}
 .ft_link span:first-child {border: 0; margin: 0; padding: 0;}
-.ft_link span a {font-size: 24;}
+.ft_link span a {font-size: 24px;}
 /* 푸터 인포 */
 .ft_info .ft_inner {padding-top: 25px; padding-bottom: 50px; background-image: url(/img/img_logo.png); background-repeat: no-repeat; background-position: right center;}
-.ft_info .ft_inner h4 {margin-bottom: 10px; font-size: 18; font-weight: 600;}
+.ft_info .ft_inner h4 {margin-bottom: 10px; font-size: 18px; font-weight: 600;}
 
 .ft_copy {display: block; margin-top: 15px;}
