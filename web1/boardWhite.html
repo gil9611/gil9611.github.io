@@ -1,0 +1,218 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>글쓰기</title>
+<!-- 웹 아이콘 연결 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/common.css">
+
+<link rel="shortcut icon" href="./img/hansung.ico">
+<link rel="apple-touch-icon" href="./img/hansung.ico">
+<!-- 검색메타 정보 -->
+<meta name="og:url" content="">
+<meta name="og:title" content="한성컴퓨터">
+<meta name="og:description" content="한성컴퓨터 매장">
+<meta name="keywords" content="한성,컴퓨터,한성컴퓨터,모니터,데스크탑,한성데스크탑">
+<!-- 오픈 그래프 -->
+<meta property="og:url" content="">
+<meta property="og:title" content="한성컴퓨터">
+<meta property="og:description" content="한성컴퓨터 매장">
+<meta property="og:image" content="./img/top_logo.png">
+</head>
+<body>
+<div class="wrap">
+	<header id="hd">
+		<div class="hd_wrap">
+		
+			
+
+<div class="hd_wrap">
+ <a class="logo" href="index.jsp">
+ <img src="./img/top_logo.png" alt="">
+ <i class="xi-star-o xi-spin"></i>
+ </a>
+ <nav id="gnb">
+ 	<ul>
+ 		
+ 			<li>
+ 				<span>노트북</span>
+ 				<ul class="sub">
+ 					
+ 						<li><a href="noteboke.html#page1">13형대 노트북</a></li>
+ 					
+ 						<li><a href="noteboke.html#page2">14형대 노트북</a></li>
+ 					
+ 						<li><a href="noteboke.html#page3">15형대 노트북</a></li>
+ 					
+ 						<li><a href="noteboke.html#page4">17형대 노트북</a></li>
+ 					
+ 				</ul>
+ 			</li>
+ 		
+ 			<li>
+ 				<span>데스크탑</span>
+ 				<ul class="sub">
+ 					
+ 						<li><a href="desktop.html#page1">사무용/교육용</a></li>
+ 					
+ 						<li><a href="desktop.html#page2">3D게임/그래픽용</a></li>
+ 					
+ 						<li><a href="desktop.html#page3">고성능/전문가용</a></li>
+ 					
+ 						<li><a href="desktop.html#page4">특가제품</a></li>
+ 					
+ 				</ul>
+ 			</li>
+ 		
+ 			<li>
+ 				<span>모니터</span>
+ 				<ul class="sub">
+ 					
+ 						<li><a href="moniter.html#page1">24형</a></li>
+ 					
+ 						<li><a href="moniter.html#page2">27형</a></li>
+ 					
+ 						<li><a href="moniter.html#page3">32형</a></li>
+ 					
+ 						<li><a href="moniter.html#page4">40형</a></li>
+ 					
+ 				</ul>
+ 			</li>
+ 		
+ 			<li>
+ 				<span>TV</span>
+ 				<ul class="sub">
+ 					
+ 						<li><a href="tv.html#page1">55형</a></li>
+ 					
+ 						<li><a href="tv.html#page2">65형</a></li>
+ 					
+ 						<li><a href="tv.html#page3">75형</a></li>
+ 					
+ 				</ul>
+ 			</li>
+ 		
+ 			<li>
+ 				<span>주변기기</span>
+ 				<ul class="sub">
+ 					
+ 						<li><a href="subitem.html#page1">키보드</a></li>
+ 					
+ 						<li><a href="subitem.html#page2">마우스</a></li>
+ 					
+ 						<li><a href="subitem.html#page3">스피커/헤드셋/마이크</a></li>
+ 					
+ 						<li><a href="subitem.html#page4">웹캠</a></li>
+ 					
+ 				</ul>
+ 			</li>
+ 		
+ 	</ul>
+ </nav>
+ <p id="tnb">
+ 	
+ 	
+		<a href="mypage.jsp">관리자</a>
+       	<a href="logout.jsp">로그아웃</a>
+		<a href="memberList.jsp">회원목록</a>
+	
+		<a href="bordList.jsp">공지사항</a>
+</p>
+<script>
+	//주소줄로 받은 msg를 출력
+	var url = location.href;	//url입력줄의 주소를 저장
+	var pos = url.indexof("?msg=");		//?msg=를 찾아 index위치, 즉 숫자로 저장.
+	var msg = url.substr(pos+5);
+	if (pos>0) {
+		if(msg!=""){
+			alert(msg)
+			return false;
+		} else {
+			return false;
+		}
+	}
+	
+</script>
+</div>
+
+		</div>
+	</header>
+	<div class="content">
+	
+		<h2>글쓰기</h2>
+		<form id="frm1" name="bordInesrt" action="bordInesrtPro.jsp" method="post" onsubmit="return Check(this)">
+			<fieldset style="width: 500">
+				<legend>글쓰기</legend>
+					<table>
+						<tbord>
+							<tr>
+								<th><label for ="is_title"></label>제목</th>
+								<td><input type ="text" class="indata" id="is_title" maxlength="20" size ="70" name="is_title"required></td>
+							</tr>
+							<tr>
+								<th><label for ="is_note"></label>내용</th>
+								<td><textarea class="indata" id="is_note" name="is_note" cols="80" rows="6" required ></textarea></td>
+							</tr>
+						</tbord>
+					</table>
+			</fieldset>
+					<table>
+					    <tbody>
+					        <td><input type="submit" value="글쓰기"></td>
+					       	<td><input type="reset" value="취소"></td>
+					       	<td><a href="bordList.jsp"><input type="button" value="목록"></a></td>
+					    </tbody>
+					</table>
+					<script type="text/javascript">
+						function Check(th){
+							var memo = th.is_note.value;
+							if(memo.length > 480){
+								alert("480자를 넘을 수 없습니다.")
+								return false;
+							}
+						}
+					</script>
+		</form>
+		
+	</div>
+	<footer id="ft">
+		
+
+<div class="ft_wrap">
+	<nav class="fnb">
+		
+		<a href="sub1.html#page1">회사소개</a>
+		
+		<a href="sub2.html">이용약관</a>
+		
+		<a href="sub3.html">개인정보처리방침</a>
+		
+		<a href="outsub1.html">소비자보호원</a>
+		
+		<a href="outsub2.html">전자거래분쟁조정위원회</a>
+		
+		<a href="sub4.html">제휴문의</a>
+		
+	</nav>
+	<nav class="snb">
+		<li class="sns">
+			<a href="" title="유튜브"><i class="xi-youtube-play"></i></a>
+		</li>
+		<li class="sns">
+			<a href="" title="네이버"><i class="xi-naver"></i></a>
+		</li>
+		<li class="sns">
+			<a href="" title="구글"><i class="xi-google"></i></a>
+		</li>
+	</nav>
+	<p class="copyright">좋은 컴퓨터를 만드는 사람들</p>
+</div>
+	</footer>
+</div>
+</body>
+</html>
